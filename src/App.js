@@ -1,6 +1,6 @@
 import React, { useState,useEffect, createContext } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login/login';
 import ProtectedRoute from './components/ProtectedRoute/protectedRoute';
 import Navigation from './components/Navbar/navbar';
@@ -11,12 +11,11 @@ import { auth } from './configs/firebase';
 import { Spinner } from 'react-bootstrap';
 import About from './components/About/about';
 import Home from './components/Home/home';
+import PageNotFound from './components/PageNotFound/pagenotfound';
 
 export const AuthContext = createContext();
 
 function App() {
-
-  console.log("App Rendered!")
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -53,6 +52,7 @@ function App() {
               <ProtectedRoute exact path="/dashboard" component={Dashboard}/>
               <Route exact path="/about" component={About}/>
               <Route exact path="/send/:username" component={SendMessage}/>
+              <Route path='*' exact component={PageNotFound} />
             </Switch>
           </div>
           </>
