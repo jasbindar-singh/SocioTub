@@ -16,4 +16,3 @@ To run it on your local machine follow these steps,
     REACT_APP_FIREBASE_M_ID=<your config>
 ```
 5. Run command ```npm start```
-6. App runs
