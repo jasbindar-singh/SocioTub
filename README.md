@@ -1,4 +1,4 @@
-#SocioTub
+# SocioTub
 To run it on your local machine follow these steps,
 
 1. Clone the project
