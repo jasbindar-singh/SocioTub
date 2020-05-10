@@ -1,6 +1,6 @@
 # SocioTub
 
-Check it out
+Check it out  
 [SocioTub](https://sociotub.netlify.app/)
 
 To run it on your local machine follow these steps,
