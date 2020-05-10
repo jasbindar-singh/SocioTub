@@ -3,14 +3,14 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA2FWJKwNFLnVRc7SASMC2GVuqp-_0-83o",
-    authDomain: "sociotub.firebaseapp.com",
-    databaseURL: "https://sociotub.firebaseio.com",
-    projectId: "sociotub",
-    storageBucket: "sociotub.appspot.com",
-    messagingSenderId: "204995793979",
-    appId: "1:204995793979:web:e34d1f81b6418b2dfa781e",
-    measurementId: "G-1GBQFGS2ZV"
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_M_SENDER,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_M_ID
 };
 
 firebase.initializeApp(firebaseConfig);
