@@ -97,20 +97,20 @@ function Dashboard() {
                         </div>
                 ) : (
                     <>
+                        <small className="text-muted sm">Share your link with everyone to receive secret message.!</small>
+                        <InputGroup className="mb-3">
+                            <Form.Control
+                                ref={linkRef}
+                                value={`${window.location.origin}/send/${username}`}
+                                readOnly="readonly"
+                            />
+                            <InputGroup.Append>
+                                <Button variant="primary" onClick={copyToClipboard}>{copySuccess}</Button>
+                            </InputGroup.Append>
+                        </InputGroup>
                         {
                             messages.length ? (
                                 <>
-                                    <small className="text-muted sm">Share your link with everyone to receive secret message.!</small>
-                                    <InputGroup className="mb-3">
-                                        <Form.Control
-                                            ref={linkRef}
-                                            value={`${window.location.origin}/send/${username}`}
-                                            readOnly="readonly"
-                                        />
-                                        <InputGroup.Append>
-                                            <Button variant="primary" onClick={copyToClipboard}>{copySuccess}</Button>
-                                        </InputGroup.Append>
-                                    </InputGroup>
                                     <Row xs={1} sm={1} md={2}>
                                         {
                                             messages.map((message, index) => {
@@ -138,7 +138,7 @@ function Dashboard() {
                                     </Modal>
                                 </>
                             ) : (
-                                <p className="text-dark">You dont have any messages right now.</p>
+                                <p className="text-dark">You dont have any messages till now.</p>
                             )
                         }
                     </>

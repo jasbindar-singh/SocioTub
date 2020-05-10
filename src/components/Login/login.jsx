@@ -26,7 +26,6 @@ function Login(props) {
         .then(user => {
             //Success
             setLoading(false)
-            console.log(user.user.uid);
             props.history.push("/dashboard");
         })
         .catch(err => {

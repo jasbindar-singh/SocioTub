@@ -4,7 +4,6 @@ import { Icon } from '@iconify/react';
 import deleteIcon from '@iconify/icons-mdi-light/delete';
 
 function Message({message, index, handleShow, getID}) {
-    console.log("message")
     return (
         <div>
             <Card style={{marginBottom: "20px"}}>
