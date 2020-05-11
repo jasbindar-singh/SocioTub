@@ -162,7 +162,7 @@ function Register(props) {
                 </Row>
 
                 <p className="text-muted">We'll never share your Credentials!</p>
-                <p className="text-muted">All the feilds have limitation of Min - 6 and Max - 15 letters.</p>
+                <p className="text-muted">All the fields have limitation of Min - 6 and Max - 15 letters.</p>
 
                 <Button variant="primary" type="submit">
                     {
