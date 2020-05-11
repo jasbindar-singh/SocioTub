@@ -36,6 +36,7 @@ function Dashboard() {
 
             await firestore
             .collection(`users/${user.uid}/messages`)
+            .orderBy("created", "desc")
             .get()
             .then(data => {
                 data.forEach(doc => {

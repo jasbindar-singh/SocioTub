@@ -2,6 +2,12 @@ import React, { useEffect, useState, useRef } from 'react'
 import { Form, Button, Spinner } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { firestore } from '../../configs/firebase'
+import noBgicon from "../../assets/images/noBg_icon.jpg"
+import loveicon from "../../assets/images/love_icon.jpg"
+import angryicon from "../../assets/images/angry_icon.jpg"
+import thinkicon from "../../assets/images/think_icon.jpg"
+import liticon from "../../assets/images/lit_icon.jpg"
+import mockicon from "../../assets/images/mock_icon.jpg"
 
 function SendMessage() {
 
@@ -111,28 +117,35 @@ function SendMessage() {
 
                                         <p>Select a background :</p>
 
-                                        <div className="container mb-2">
+                                        {/* <div className="container mb-2">
                                             <div className="row">
-                                                <div onClick={handleBgChange} className="col text-center m-2" id="noBg">
-                                                    6
+                                                <div onClick={handleBgChange} className="col text-center m-2 py-4 noBg rounded" id="noBg">
                                                 </div> 
-                                                <div onClick={handleBgChange} className="col text-center m-2" id="love">
-                                                    1
+                                                <div onClick={handleBgChange} className="col text-center m-2 py-4 love rounded" id="love">
                                                 </div>
-                                                <div onClick={handleBgChange} className="col text-center m-2" id="angry">
-                                                    2
+                                                <div onClick={handleBgChange} className="col text-center m-2 py-4 angry rounded" id="angry">
                                                 </div>   
                                             </div>
                                             <div className="row">
-                                                <div onClick={handleBgChange} className="col text-center m-2" id="mock">
-                                                    4
+                                                <div onClick={handleBgChange} className="col text-center m-2 py-4 mock rounded" id="mock">
                                                 </div>
-                                                <div onClick={handleBgChange} className="col text-center m-2" id="lit">
-                                                    5
+                                                <div onClick={handleBgChange} className="col text-center m-2 py-4 lit rounded" id="lit">
                                                 </div>
-                                                <div onClick={handleBgChange} className="col text-center m-2" id="think">
-                                                    3
+                                                <div onClick={handleBgChange} className="col text-center m-2 py-4 think rounded" id="think">
                                                 </div> 
+                                            </div>
+                                        </div> */}
+
+                                        <div className="d-flex flex-column mb-2">
+                                            <div className="d-flex justify-content-around align-items-center mb-3">
+                                                <img onClick={handleBgChange} id="noBg" className="rounded-circle" width="50px" height="50px" src={noBgicon} alt=""/>
+                                                <img onClick={handleBgChange} id="love" className="rounded-circle" width="50px" height="50px" src={loveicon} alt=""/>
+                                                <img onClick={handleBgChange} id="angry" className="rounded-circle" width="50px" height="50px" src={angryicon} alt=""/>  
+                                            </div>
+                                            <div className="d-flex justify-content-around align-items-center">
+                                                <img  onClick={handleBgChange} id="mock" className="rounded-circle" width="50px" height="50px" src={mockicon} alt=""/>
+                                                 <img onClick={handleBgChange} id="lit" className="rounded-circle" width="50px" height="50px" src={liticon} alt=""/>
+                                                <img onClick={handleBgChange} id="think" className="rounded-circle" width="50px" height="50px" src={thinkicon} alt=""/>   
                                             </div>
                                         </div>
 
