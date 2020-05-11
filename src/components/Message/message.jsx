@@ -15,6 +15,7 @@ function Message({message, index, handleShow, getID}) {
                             getID(e.target.id)
                         }}/>
                     </div>
+                    <Card.Subtitle className="mb-2 text-muted small">{message.created.toDate().toLocaleString()}</Card.Subtitle>
                     <Card.Text>
                         {message.message}
                     </Card.Text>
