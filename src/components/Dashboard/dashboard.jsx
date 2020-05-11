@@ -113,10 +113,10 @@ function Dashboard() {
                                 <>
                                     <Row xs={1} sm={1} md={2}>
                                         {
-                                            messages.map((message, index) => {
+                                            messages.map(message => {
                                                 return (
                                                     <Col key={message.id}>
-                                                        <Message message={message} index={index} handleShow={handleShow} getID={getID}/>
+                                                        <Message message={message} handleShow={handleShow} getID={getID}/>
                                                     </Col>
                                                 );
                                             })

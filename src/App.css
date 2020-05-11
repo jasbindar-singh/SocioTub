@@ -32,6 +32,48 @@ button:focus{
   background-color: #faf5f2!important;
 }
 
+.fontDefault{
+  text-align: center!important;
+  letter-spacing: 3px;
+  font-size: 18px!important;
+}
+
+.bgDefault{
+  background-position: center!important;
+  background-size: contain!important;
+}
+
+.noBg{
+  color: #495057;
+  background-color: #ffffff!important;
+}
+
+.love{
+  color: #ffffff!important;
+  background-image: url(./assets/images/love.jpg);
+}
+
+.angry{
+  color: #ffffff!important;
+  background-image: url(./assets/images/angry.jpg);
+}
+
+.think{
+  color: #ffffff!important;
+  background-image: url(./assets/images/think.jpg);
+}
+
+.mock{
+  color: #ffffff!important;
+  background-image: url(./assets/images/mock.jpg);
+}
+
+.lit{
+  color: #ffffff!important;
+  background-image: url(./assets/images/lit.jpg);
+}
+
+
 @media only screen and (max-width: 600px) {
   .navigation{
     background-color: #FDC8C8;
