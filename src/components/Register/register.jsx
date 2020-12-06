@@ -62,7 +62,7 @@ function Register(props) {
 
                 await auth
                 .createUserWithEmailAndPassword(email.value, password.value)
-                .then(user => {
+                .then(async user => {
                     let id = user.user.uid
 
                     let dataInfo = {
@@ -72,7 +72,7 @@ function Register(props) {
                         email: email.value
                     }
 
-                    firestore
+                    await firestore
                     .collection("users")
                     .doc(id)
                     .set(dataInfo)
