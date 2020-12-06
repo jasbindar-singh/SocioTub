@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
-import { AuthContext } from '../../App';
+import { AuthContext } from '../../contexts/authProvider';
 import { auth } from '../../configs/firebase';
 import { Redirect } from 'react-router-dom';
 import { Button, Form, Spinner } from 'react-bootstrap';
 
 function Login(props) {
 
-    const user = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     
     const [ loading, setLoading ] = useState(false);
 

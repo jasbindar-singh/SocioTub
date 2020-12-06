@@ -2,11 +2,11 @@ import React, { useEffect, useState, useContext, useRef, useCallback } from 'rea
 import { Row, Col, Spinner, Modal, Button, InputGroup, Form } from 'react-bootstrap'
 import Message from '../Message/message'
 import { firestore } from '../../configs/firebase'
-import { AuthContext } from '../../App'
+import { AuthContext } from '../../contexts/authProvider'
 
 function Dashboard() {
 
-    const user = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const linkRef = useRef(null);
 

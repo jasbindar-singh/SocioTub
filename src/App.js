@@ -1,4 +1,4 @@
-import React, { useState,useEffect, createContext } from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login/login';
@@ -7,35 +7,19 @@ import Navigation from './components/Navbar/navbar';
 import Register from './components/Register/register';
 import Dashboard from './components/Dashboard/dashboard';
 import SendMessage from './components/SendMessage/sendMessage';
-import { auth } from './configs/firebase';
 import { Spinner } from 'react-bootstrap';
 import About from './components/About/about';
 import Home from './components/Home/home';
 import PageNotFound from './components/PageNotFound/pagenotfound';
+import { AuthContext } from './contexts/authProvider';
 
-export const AuthContext = createContext();
 
 function App() {
 
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    let unsubscribeFromAuth = null;
-    setLoading(true)
-    unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-        if(user)
-          setUser(user)
-        else
-          setUser(null)
-        setLoading(false)
-    });
-
-    return () => unsubscribeFromAuth();
-  }, [])
-
+  const { loading } = useContext(AuthContext);
+  
   return (
-    <AuthContext.Provider value={user}>
+    <>
       {
         loading ? (
           <div className="fullLoader">
@@ -58,7 +42,7 @@ function App() {
           </>
         )
       }
-    </AuthContext.Provider>
+    </>
   );
 
 }
