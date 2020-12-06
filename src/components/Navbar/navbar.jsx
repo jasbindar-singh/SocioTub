@@ -6,12 +6,12 @@ import {
 import { Icon } from '@iconify/react';
 import menuIcon from '@iconify/icons-mdi-light/menu';
 import { auth } from '../../configs/firebase';
-import { AuthContext } from '../../App';
+import { AuthContext } from '../../contexts/authProvider';
 import { withRouter } from 'react-router-dom';
 
 function Navigation(props) {
 
-    const user = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     async function handleClick(){
         await auth

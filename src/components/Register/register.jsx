@@ -2,11 +2,11 @@ import React, { useState, useContext } from 'react'
 import { Form, Button, InputGroup, Row, Col, Spinner } from 'react-bootstrap'
 import { firestore, auth } from '../../configs/firebase';
 import { Redirect, withRouter } from 'react-router-dom';
-import { AuthContext } from '../../App';
+import { AuthContext } from '../../contexts/authProvider';
 
 function Register(props) {
 
-    const user = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const [username, setUsername] = useState("");
     const [isValidUsername, setIsValidUsername] = useState("muted")
